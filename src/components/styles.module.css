@@ -1,0 +1,129 @@
+/* Fondo */
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "EB Garamond", serif;
+  background: #aaa;
+  overflow-x: hidden;
+}
+
+/* Barra superior */
+.topbar {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 7px 0;
+  font-size: 14px;
+}
+
+/* Barra principal */
+.mainmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 28px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo p {
+  font-family: "Georgia", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: black;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo em {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* Menú de navegación */
+.barra {
+  display: flex;
+  gap: 30px;
+}
+
+.opcion {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Controles del usuario */
+.usercontrols {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+/* Icono del carrito */
+.btnCart {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Eliminar padding adicional */
+  background-color: transparent; /* Sin fondo adicional */
+  box-shadow: none; /* Eliminar la sombra */
+}
+
+/* Estilos del icono del carrito */
+.iconCart {
+  width: 24px; /* Tamaño del ícono reducido */
+  height: 24px; /* Tamaño del ícono reducido */
+  fill: #333; /* Color del ícono */
+  transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+/* Hover del carrito */
+.iconCart:hover {
+  transform: scale(1.1); /* Efecto de zoom más sutil */
+}
+
+/* Número de items en el carrito */
+.cartBadge {
+  position: absolute;
+  top: -3px; /* Ajuste en la posición */
+  right: -3px; /* Ajuste en la posición */
+  background-color: red; /* Fondo rojo del círculo */
+  color: white; /* Color del número */
+  border-radius: 50%; /* Círculo perfecto */
+  width: 16px; /* Tamaño del círculo */
+  height: 16px; /* Tamaño del círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px; /* Tamaño del texto pequeño */
+  font-weight: bold;
+  visibility: hidden; /* Ocultarlo por defecto */
+}
+
+/* Mostrar el número solo si hay cantidad */
+.cartBadge[data-quantity]:not([data-quantity="0"]) {
+  visibility: visible; /* Hacerlo visible solo si hay elementos */
+}
+
+/* Ajustes para el corazón */
+.usercontrols > svg {
+  margin-right: 10px;
+  fill: red;
+  width: 28px;
+  height: 28px;
+}
+
+/* Hover de opciones */
+.opcion:hover {
+  color: gray;
+}
